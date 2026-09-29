@@ -7,6 +7,9 @@ com lista, mapa e download em Excel/CSV. Dados da Google Places API (New).
     pip install -r requirements.txt
     GOOGLE_MAPS_API_KEY=sua_chave streamlit run app.py
 
+## Instalar no servidor próprio (VPS)
+Veja [deploy/LEIAME_VPS.md](deploy/LEIAME_VPS.md): serviço systemd + nginx/Apache em `/buscador/`.
+
 ## Publicar no Streamlit Community Cloud (grátis)
 1. Suba esta pasta para um repositório no GitHub.
 2. Em https://share.streamlit.io clique em **Create app**, escolha o repositório e o arquivo `app.py`.

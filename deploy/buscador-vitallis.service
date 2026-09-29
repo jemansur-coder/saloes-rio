@@ -1,0 +1,21 @@
+[Unit]
+Description=Buscador Vitallis (Streamlit)
+After=network.target
+
+[Service]
+Type=simple
+User=buscador
+Group=buscador
+WorkingDirectory=/opt/buscador-vitallis
+EnvironmentFile=/etc/buscador-vitallis.env
+ExecStart=/opt/buscador-vitallis/venv/bin/streamlit run app.py \
+    --server.headless true \
+    --server.address 127.0.0.1 \
+    --server.port 8501 \
+    --server.baseUrlPath buscador \
+    --browser.gatherUsageStats false
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
